@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Spacetime</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="spacetime.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body class="mx-auto" style="font-family:Herculanum">
+
+<!-- Main Page -->
+        <div class="mx-auto d-flex justify-content-center">
+            <div id="home">
+                <div style="margin-top: 100px;">
+                    <div>
+                        <div id="bh"></div>
+<!-- Title And Logo -->
+                        <div class="display-1 text-light" id="logo1">Spacetime<br /><span class="h3" style="margin-left: 86px; color: rgb(240,218,121);">A Long Journey Home</span></div>
+                        <div id="logo"></div>
+                    </div>
+<!-- Buttons -->
+                    <div class="mt-5" id="button">
+                        <button id="story">Story Mode</button>    
+                        <button id="endless">Endless Run</button>
+                        <button id="scores">High Scores</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+<!-- Game Play Page -->
+
+        <div class="mx-auto game" id="backgr">
+
+ <!-- Black Top Border -->
+            <div id="top"></div> 
+
+ <!-- Black Left Border -->
+            <div id="left"><p class="text-bottom text-white h6 ml-3" id="qForQuit">Press "Q" to Quit</p></div>
+
+ <!-- Black Right Border -->
+            <div id="right"></div>
+
+<!-- First Board Scroll -->
+            <div class="scroll" id="scroll1">
+                <p id="firstScroll" class="text-uppercase text-justify h3" style="color: rgb(240,218,121);">
+                    while joyriding in a stolen spaceship you flew too close to a blackhole and got 
+                    flung across the universe, many galaxies away from home.<br/>  
+                    Your ship's navigation is broke and there is no telling where the spacetime has 
+                    put you.  You are flying blindly and cannot find a direct route back to earth so 
+                    you have to find another blackhole and hope that it will bring you home.<br/>  
+                    Unfortunately, while traveling through the spacetime many systems for your 
+                    ship have been damaged.  Your hull defense and weapons systems are the main 
+                    areas to worry about. However, don't worry your ship has an automatic repair 
+                    system, but it will take time to repair all the damage.<br/>  
+                    This far from home you will be in constant danger so you will always have to 
+                    be on the move and on the look out for another blackhole.<br/> 
+                    While you are waiting 
+                    you will have to avoid any floating asteroids.  One hit and your hull will be 
+                    breached and the ship will be lost.<br/>  
+                    Regrettably, without any weapons all you 
+                    can do is fly around the obstacles.<br/>  
+                    Always be on the alert and good luck getting home!</p>
+                </div> 
+
+<!-- Second Board Scroll -->
+            <div class="scroll" id="scroll2">
+                <p id="secondScroll" class="text-uppercase text-justify h3" style="color: rgb(240,218,121);">
+                    Good job on avoiding being hit by the floating asteroids and finding another blackhole.  
+                    However, you still aren't close to home and the ship's navigation is still broke so 
+                    there is no telling where you are or where you are suppose to go.<br/>
+                    Good news though!<br/>
+                    The ship's automatic repair system has been at work.  All systems are still not 
+                    fully functional, but the defense and weapon's systems are now online.  There are 
+                    still some glitches and the ship will only be able to take one strike, two and you 
+                    will have to abandon ship and be stuck far from home.<br/>
+                    Also, you have some functionality with your weapons and it should be able to fire 
+                    at the asteroids and blow up the ones you cannot avoid.  However, the cooling system 
+                    is still not repaired and after only 20 or so shots the weapons system will begin 
+                    to overheat and the system will go back offline.<br/>
+                    Find another blackhole and again good luck!</p>
+                </div> 
+
+<!-- Third Board Scroll -->
+            <div class="scroll" id="scroll3">
+                <p id="thirdScroll" class="text-uppercase text-justify h3" style="color: rgb(240,218,121);">
+                    You found another blackhole!!!<br/>
+                    Unfortunately, you are still lost.<br/>
+                    And, you were cast extremely close to a planet.  The planets gravity is tremendously strong and it
+                    is making the asteroids travel faster.  Be alert as you travel through the asteroids and continue
+                    to journey home.<br/>
+                    The good news is that the ship's defense system is back fully operational.  However, don't get too
+                    comfortable because your hull can only take 4 strikes before it is compromised.  So continue to
+                    avoid the asteroids whenever possible.<br/>
+                    Your weapons system is taking setbacks every time you travel through a blackhole.  It has improved 
+                    though, your weapons cooling is now working better and you can fire 30 or so times before it overheats
+                    and goes offline.<br/>
+                    Continue on your mission to find a spacetime home.<br/>
+                    Good Luck!!!</p>
+                </div> 
+
+<!-- Fourth Board Scroll -->
+            <div class="scroll" id="scroll4">
+                <p id="fourthScroll" class="text-uppercase text-justify h3" style="color: rgb(240,218,121);">
+                    You made it to another blackhole and away from that planet's gravitational field and not a moment 
+                    too soon, the gravity was beginning to pull you down.  A crash on the planet's surface would have 
+                    likely destroyed your ship and any chance at getting home.<br/>
+                    Some really good news to report though is that the navigational system is starting to come online.
+                    The initial reading indicates that you are only a couple galaxies away from home.  But until the
+                    system comes online fully you can't navigate directly home and have to be on the look out for 
+                    another blackhole.<br/>
+                    Also, your weapons system is fully operational and not a moment too soon because where you have
+                    found yourself now has more asteroids than you have encountered before.  Use your combat skills
+                    and destroy any asteroids that get in your way.<br/>
+                    And don't forget to be on the look out for the next blackhole.  It may be your ticket home.<br/>
+                    Again Good luck.</p>
+                </div> 
+
+<!-- Fifth Board Scroll -->
+            <div class="scroll" id="scroll5">
+                <p id="fifthScroll" class="text-uppercase text-justify h3" style="color: rgb(240,218,121);">
+                    This last trip through a spacetime has given your ship the time to fix all the systems that were
+                    damaged.<br/>
+                    Your ship is fully operational and the navigation system has plotted a course home.  It has found
+                    the blackhole you need to be transported back to your planet.<br/>
+                    And best of all is that the scanners don't detect any asteroids in this galaxy.<br/>
+                    That was the good news. . .<br/>
+                    Regrettably, you were again taken to the proximity of a planet.  This one is inhabited though
+                    by an advanced race of people who view you as a threat.<br/>
+                    They have sent a space destroyer to capture you or exterminate you if necessary.<br/>
+                    Even if you don't want war it is being brought to you.  The only way to the blackhole you need in
+                    order to travel home is blocked by this destroyer.<br/>
+                    You have to destroy the threat and go through to make it home.  Fire at the destroyer until it explodes.
+                    Its defenses are more advanced than yours and the ship will respond to being fired at.  It will travel 
+                    faster so be quick and diligent.<br/>
+                    You are almost home.  Good luck, you will need it!!!</p>
+                </div> 
+
+<!-- Sixth Board Scroll -->
+            <div class="scroll" id="scroll6">
+                <p id="sixthScroll" class="text-uppercase text-justify h3" style="color: rgb(240,218,121);">
+                    Finally the sweet sight of your home planet.<br/>
+                    You have been on a long journey home.<br/>
+                    I hope you have learned your lesson about joyriding.  You never know where you may end up.<br/>
+                    The ship has an automatic landing system, so just sit back and relax for the last part of your
+                    trip.<br/>
+                    Congratulations, and never forget the feeling of<br/>
+                    home sweet home<br/>
+                    as you make any future decisions.<br/>
+                    It has been a pleasure to assist you.<br/>
+                    Good bye and Good luck in all your endeavours!</p>
+                </div> 
+
+            <div class="mx-auto" id="background">
+                    
+                <div class="bg-danger px-3 pt-3 nextLevel" id="next">
+                    <div class="border p-1">
+                        <div class="nextDim">     
+                            <div class="text-center h2 mt-4 countdown"></div>
+                        </div>   
+                        <div class="text-center mt-4">
+                            <button class="continueNext" id="continueNext1">Continue</button>
+                            <button class="continueNext" id="continueNext2">Continue</button>
+                            <button class="continueNext" id="continueNext3">Continue</button>
+                            <button class="continueNext" id="continueNext4">Continue</button>
+                            <button class="quit">Quit</button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Blackhole -->
+                <div class="d-flex" id="blackhole">
+                    <div class="blackhole bh1"><input class="progress1"></input></div>
+                </div>
+
+<!-- Asteroid -->
+                <div id="asteroid"></div>  
+
+<!-- Score/Asteroid Destroyed Counters -->
+                <div>
+                    <input class="float-left" id="scoreKeep"></input>
+                    <input class="float-right" id="asteroidCounter" value="Asteroids Destroyed:"></input>
+                </div>
+
+<!-- First Alert Page (When You Still Have Lives Left) -->
+                <div class="bg-warning alert" id="alert">
+                    <h1 id="warning" class="text-capitalize text-center text-danger">you were hit!!! <br/> watch out <span id="lives"></span> more hits and your ship will be lost!!!</h1>
+                    <div id="alertDim">
+                    <div class="text-center h2 mt-4 countdown"></div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="continue" id="continue">Continue</button>
+                        <button class="continue" id="continue2">Continue</button>
+                        <button class="continue" id="continue3">Continue</button>
+                        <button class="continue" id="continue4">Continue</button>
+                        <button class="continue" id="continue5">Continue</button>
+                        <button class="quit">Quit</button>
+                        <button class="quitToScore">Quit</button>
+                    </div>
+                </div>
+
+<!-- Second Alert Page (When You Don't Have Any Lives) -->
+                <div class="bg-warning alert" id="alert2">
+                    <h1 id="warning2" class="text-capitalize text-center text-danger">an asteroid has breached your ship's hull!!! <br/>all life support systems are failing, abandon ship!!!</h1>
+                    <div class="text-center mt-5 pt-1">
+                        <button id="restart1">Restart Level</button>
+                        <button id="restart2">Restart Level</button>
+                        <button id="restart3">Restart Level</button>
+                        <button id="restart4">Restart Level</button>
+                        <button id="restart5">Restart Level</button>
+                        <button class="quit">Quit</button>
+                        <button class="quitToScore">Quit</button>
+                    </div>
+                </div>
+
+<!-- Name Input Page For New High Score -->
+                <div class="bg-primary" id="newScore">
+                    <h1 id="warning" class="text-capitalize text-center text-white">Congratulations!!!<br/ >You have a new high score.<br/ >Please Enter Your Name.</h1>
+                    <div class="mt-4 d-flex justify-content-center">
+                        <form action="" class="" autocomplete="off">
+                            <input type="text" id="scoreInput">
+                        </form>
+                        <button id="ok">OK</button>
+                    </div>
+                </div>
+
+<!-- High Score Page -->
+                <div class="bg-primary" id="highScore">
+                    <h1 id="warning2" class="text-capitalize text-center text-white">High Scores</h1>
+                    <div class="ml-5 float-left">
+                        <div class="text-white h5">TIME</div>
+                        <div id="list"></div>
+                    </div>
+                    <div class="float-right mr-5">
+                        <div class="text-white h5">ASTEROIDS DESTROYED</div>
+                        <div class="" id="list2"></div>
+                    </div>
+                    <div class="text-center" style="margin-top: 190px">
+                        <button id="clear">Clear High Scores</button>
+                        <button id="menu">Main Menu</button>
+                    </div>
+                </div>
+
+<!-- Level 5 Enemy Weapon -->
+                <div class="laser laser1" id="laser1"></div>
+                <div class="laser laser1" id="laser2"></div>
+                <div class="laser laser1" id="laser3"></div>
+                
+<!--  Level 5 Enemy -->
+                <div id="destroyer"></div> 
+
+<!-- Weapon -->
+                <div class="" id="weapon">
+                    <div class="laser" id="laser"></div>
+                </div>
+           
+<!-- Spaceship -->
+                <div class="ship" id="ship"></div>
+                <div class="ship" id="ship2"></div>
+                <div class="ship" id="ship3"></div>
+                <div class="ship" id="ship4"></div>
+                <div class="ship" id="ship5"></div>
+                <div class="ship" id="ship6"></div>
+            </div>
+  <!-- Black Bottom Border -->          
+            <div class="text-white h4 text-center" id="bottom"><p class="mt-2" id="pause">Press "P" to Pause/Play</p><p id="move">⬅️ to Move Left <span class="mr-4"></span> <span class="mr-4" id="fire"> ⬆️ to Fire Weapon </span> ➡️ to Move Right</p></div>
+        </div>
+    </body>
+
+    <script src="spacetime.js"></script>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+
+</html>

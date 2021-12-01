@@ -1,0 +1,473 @@
+/* Font */
+
+@font-face {
+  font-family: 'herculanum';
+  src: url('fonts/Herculanum.ttf')
+  format('ttf')
+}
+
+/* Main Page */
+
+/* Logo */
+#logo {
+  background: url('images/spaceships/spaceship.png');
+  background-size: 590px 375px;
+  transform: rotate(45deg);
+  width: 590px;
+  height: 375px;
+  z-index: 0;
+  position: relative;
+}
+
+#logo1 {
+  z-index: 6;
+  margin-top: 30px;
+  margin-left: 425px;
+  position: absolute;
+  color: rgb(240,218,121);
+}
+
+#bh {
+  background: url('images/blackhole.png');
+  background-size: 50px 36px;
+  width: 50px;
+  height: 36px;
+  margin-left: 775px;
+}
+
+/* Start Game Animation */
+.firstSpacetime {
+  animation: 4s linear travel1 .2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes travel1 {
+  0% { top: 0px;
+       left: 0px;
+       background-size: 590px 375px;
+       transform: rotate(45deg);
+       width: 590px;
+       height: 375px;
+  }
+  100% { top: -20px; 
+         left: 800px;
+         transform: rotate(2160deg);
+         background-size: 0px 0px;
+         width: 0px;
+         height: 0px; 
+         
+  }
+} 
+
+/* Background */
+#home {
+  background: url('images/backgrounds/Milky_Way.jpg');
+  background-size: 1300px 660px;
+  width: 1300px;
+  height: 650px;
+  overflow: hidden;
+}
+
+/* Buttons */
+#button {
+  position: absolute;
+  margin-left: 490px;
+}
+
+/* Game Play Page */
+
+/* Black Border */
+#backgr {
+    background-color: black;
+    width: 1300px;
+    height: 560px;
+}
+
+/* Top Black Border */
+ #top {
+  background-color: black;
+  width: 1300px;
+  height: 100px;
+  margin-top: -100px;
+  position: absolute;
+  z-index: 4;
+} 
+
+/* Bottom Black Border */
+#bottom {
+  background-color: black;
+  width: 1300px;
+  height: 100px;
+  position: absolute;
+}
+
+/* Left Black Border */
+#left {
+  background-color: black;
+  width: 200px;
+  height: 560px;
+  position: absolute;
+  z-index: 2;
+}
+
+#qForQuit {
+  margin-top: 530px;
+}
+
+/* Right Black Border */
+#right {
+  background-color: black;
+  width: 200px;
+  height: 560px;
+  margin-left: 1100px;
+  position: absolute;
+  z-index: 2;
+}
+
+/* Space Background */
+#background {
+  background: url('images/backgrounds/space.png');
+  background-size: 900px 460px;
+  width: 900px;
+  height: 460px;
+  margin-top: 90px;
+  overflow: hidden;
+}
+
+/* Spaceship */
+.ship {
+  background: url("images/spaceships/spaceship.png");
+  background-size: 100px 64px;
+  width: 100px;
+  height: 64px;
+  top: 380px;
+  left: 400px;
+  position: relative;
+  z-index: 7;
+} 
+
+/* Spaceship Spin */
+.spin {
+  animation: rotate 1s linear;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(2160deg) }
+}
+
+/* Weapon */
+.laser {
+  width: 5px;
+  height: 15px;
+  background-color: white;
+  position: absolute;
+}
+
+#weapon {
+  position: relative;
+  width: 5px;
+  height: 15px;
+  top: 410px;
+  left: 447.5px;
+  z-index: 3;
+}
+
+.laser1 {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+/* Blackhole */
+.blackhole {
+  background: url('images/blackhole.png');
+  background-size: 159px 114px;
+  width: 159px;
+  height: 114px;
+  margin-top: -114px;
+}
+  
+#blackhole {
+  width: 900px;
+}
+
+.progress1 {
+  display: none;
+} 
+
+/* Asteroid */
+.asteroid {
+  background: url("images/asteroid.png");
+  background-size: 50px 38px;
+  width: 50px;
+  height: 38px;
+  margin-top: -60px;
+  margin-right: 50px;
+  position: absolute;
+}
+
+#asteroid {
+  width: 850px;
+  margin-left: 25px;
+}
+
+/* Asteroid Destroyed Explode Animation */
+.explode2 {
+  animation: .1s linear explode2;
+  animation-fill-mode: forwards;
+}
+
+@keyframes explode2 {
+  0% { background-size: 50px 38px;
+       width: 50px;
+       height: 38px;
+  }
+
+  50% { background-size: 25px 19px;
+        width: 25px;
+        height: 19px;
+        opacity: 1;
+  }
+
+  100% { background-size: 60px 46px;
+         width: 60px;
+         height: 46px; 
+         opacity: 0;
+  }
+} 
+
+/* Asteroids Destroyed Counter */
+#asteroidCounter {
+  width: 250px;
+}
+
+/* Alert/High Score Pages */
+.alert, #highScore, #newScore {
+  width: 700px;
+  height: 350px;
+  position: absolute;
+  margin-top: 74px;
+  margin-left: 100px;
+}
+
+.nextLevel {
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  margin-top: 175px;
+  margin-left: 300px;
+  z-index: 7;
+}
+
+.nextDim {
+  height: 36px;
+}
+
+#alertDim {
+  height: 38px;
+}
+
+#warning {
+  margin-top: 50px;
+}
+
+#warning2 {
+  margin-top: 30px
+}
+
+#countdown {
+  height: 30px;
+}
+
+/* Story Mode */
+
+/* Words Scroll */
+.scroll {
+  background-color: black;
+  width: 900px;
+  height: 460px;
+  margin-top: 90px;
+  margin-left: 200px;
+  overflow: hidden;
+}
+
+/* First And Fifth Scroll */
+.opening {
+  width: 18em;
+  height: 50em;
+  left: 50%;
+  margin-left: -9em;
+  position: relative;
+  animation: 50s linear scroll;
+  transform: perspective(700px) rotateX(35deg);
+}
+
+@keyframes scroll {
+  0% { top: 35%;  }
+  100% { top: -250%; }
+} 
+
+/* Second Scroll */
+.scrollSecond {
+  width: 18em;
+  height: 50em;
+  left: 50%;
+  margin-left: -9em;
+  position: relative;
+  animation: 50s linear scroll2;
+  transform: perspective(700px) rotateX(35deg);
+}
+
+@keyframes scroll2 {
+  0% { top: 35%;  }
+  100% { top: -170%; }
+} 
+
+/* Third Scroll */
+.scrollThird {
+  width: 18em;
+  height: 50em;
+  left: 50%;
+  margin-left: -9em;
+  position: relative;
+  animation: 50s linear scroll3;
+  transform: perspective(700px) rotateX(35deg);
+}
+
+@keyframes scroll3 {
+  0% { top: 35%;  }
+  100% { top: -150%; }
+} 
+
+/* Fourth Scroll */
+.scrollFour {
+  width: 18em;
+  height: 50em;
+  left: 50%;
+  margin-left: -9em;
+  position: relative;
+  animation: 50s linear scroll4;
+  transform: perspective(700px) rotateX(35deg);
+}
+
+@keyframes scroll4 {
+  0% { top: 35%;  }
+  100% { top: -200%; }
+} 
+
+/* Sixth Scroll */
+.scrollSix {
+  width: 18em;
+  height: 50em;
+  left: 50%;
+  margin-left: -9em;
+  position: relative;
+  animation: 50s linear scroll6;
+  transform: perspective(700px) rotateX(35deg);
+}
+
+@keyframes scroll6 {
+  0% { top: 35%;  }
+  100% { top: -100%; }
+} 
+
+/* End Of Levels Blackhole Animation */
+
+/* BlackHole Animation Level 1 */
+.spacetime {
+  margin-left: 380px;
+  position: relative;
+  animation: 5s linear move 10s;
+  animation-fill-mode: forwards;
+}
+
+/* Blackhole Animation Other Levels */
+.spacetime2 {
+  margin-left: 380px;
+  position: relative;
+  animation: 5s linear move 7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  0% { top: 0px; }
+  100% { top: 300px; }
+} 
+
+/* End Of Levels Spacehip Animation */
+.travel {
+  animation: 4s linear travel;
+  animation-fill-mode: forwards;
+}
+
+@keyframes travel {
+  0% { top: 380px;
+       transform: rotate(0);
+       background-size: 100px 64px;
+       width: 100px;
+       height: 64px;
+  }
+  100% { top: 240px; 
+         transform: rotate(2160deg);
+         background-size: 0px 0px;
+         width: 0px;
+         height: 0px; 
+         left: 460px
+  }
+} 
+
+/* Level 5 Enemy */
+#destroyer {
+  background: url("images/spaceships/destroyer.png");
+  background-size: 100px 56px;
+  width: 100px;
+  height: 56px;
+  margin-top: 10px;
+  position: absolute;
+  z-index: 7;
+} 
+
+/* Enemy Explode Animation */
+.explode {
+  animation: 1s linear explode 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes explode {
+  0% { background-size: 100px 56px;
+       width: 100px;
+       height: 56px;
+  }
+
+  50% { background-size: 80px 45px;
+        width: 80px;
+        height: 45px;
+        opacity: 1;
+  }
+
+  100% { background-size: 150px 84px;
+         width: 150px;
+         height: 84px; 
+         opacity: 0;
+  }
+} 
+
+/* Win Game Animation */
+.goHome {
+  animation: 4s linear home;
+  animation-fill-mode: forwards;
+}
+
+@keyframes home {
+  0% { top: 410px;
+       background-size: 100px 64px;
+       width: 100px;
+       height: 64px;
+  }
+  100% { top: 240px; 
+         background-size: 0px 0px;
+         width: 0px;
+         height: 0px; 
+         left: 460px
+  }
+}
